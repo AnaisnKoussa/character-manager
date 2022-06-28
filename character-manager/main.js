@@ -1,2 +1,5 @@
 import './style.scss'
-import './fetch.js'
+import './dashboard.js'
+import './menu.js'
+import './character-creation.js'
+

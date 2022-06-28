@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  header{
+    background-color: rgba(55, 25, 191);
+    height: 150px;
+    nav{
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-size: 25px;
+        font-weight: 900;
+        color: red;
+        text-align: center;
+      }
+    }
+  }
+  main {
+    margin: 30px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      section {
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px darkgray;
+        padding: 20px;
+        width: 300px;
+        height: 400px;
+        text-align: center;
+        background-color: lightgray;
+      }
+      :hover {
+        opacity: 70%;
+      }
+      
+     
+    }
+
+  }
+}

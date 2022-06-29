@@ -1,6 +1,7 @@
 const aCreation = document.querySelector("#a-character-creation");
 const dashboard = document.querySelector("#dashboard")
 const main = document.querySelector("main")
+const url = "https://character-database.becode.xyz/characters";
 
 
 aCreation.addEventListener("click", () => {
@@ -21,4 +22,23 @@ aCreation.addEventListener("click", () => {
         <input type="submit" value="Submit">
     </form>
     `   
+    let form = document.querySelector("form");
+    let name = document.querySelector("#name");
+    let shortDescription = document.querySelector("#sdescription");
+    let description = document.querySelector("#description");
+    let image = document.querySelector("#image");
+    form.addEventListener("submit", () => {
+        fetch(url, {
+            method: 'POST',
+            body: {
+                "name" : `${name}`,
+            
+                "shortDescription" : `${shortDescription}`,
+            
+                "description" : `${description}`,
+
+                "image" : `${image}`
+            }
+        });
+    })
 })

@@ -28,6 +28,15 @@ let showDetailsCard = (character) => {
         <button id="button-delete" type="button">Delete</button>   
     `;
     main.appendChild(section);
+    const deleteButton = document.querySelector("#button-delete");
+    deleteButton.addEventListener('click', () => {
+        let text = "Are you sure ?";
+        if (confirm(text) == true) {
+            fetch(url,{method:'DELETE'})
+                .then(response => response.json())
+                .then(data=> console.log(data))
+        } 
+    })
 }
 
 fetch(url, methodGet)

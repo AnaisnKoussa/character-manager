@@ -14,31 +14,49 @@ aCreation.addEventListener("click", () => {
         <label for="name"></label>Name :<br>
         <input type="text" id="name" name="name"><br><br>
         <label for="sdescription">Short Description :</label><br>
-        <input type="text" id="sdescription" name="sdescription"><br><br>
+        <textarea id="sDescription" type="text"></textarea><br><br>
         <label for="description">Description :</label><br>
-        <input type="text" id="description" name="description"><br><br>
+        <textarea id="description"></textarea><br><br>
         <label for="image"></label>Image :<br>
-        <input type="image" id="image" name="image"><br><br>
-        <input type="submit" value="Submit">
+        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"><br><br>
+        <button id="submit">Submit</button>
     </form>
     `   
-    let form = document.querySelector("form");
+    let button = document.querySelector("#submit");
     let name = document.querySelector("#name");
     let shortDescription = document.querySelector("#sdescription");
     let description = document.querySelector("#description");
-    let image = document.querySelector("#image");
-    form.addEventListener("submit", () => {
-        fetch(url, {
-            method: 'POST',
-            body: {
-                "name" : `${name}`,
-            
-                "shortDescription" : `${shortDescription}`,
-            
-                "description" : `${description}`,
+    const file = document.querySelector("input[type=file]");
+    var base64String = "";
+    function Uploaded() {
+        var file = document.querySelector("input[type=file]")["files"][0];
+        var reader = new FileReader();
+        reader.onload = function () {
+            base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
+            imageBase64Stringsep = base64String;
+        };
+        reader.readAsDataURL(file);
+    }
 
-                "image" : `${image}`
-            }
-        });
+    file.addEventListener("change", () => {
+        Uploaded();
+    });
+    button.addEventListener("click", () => {
+        try {
+            fetch("https://character-database.becode.xyz/characters", {
+                method: 'POST',
+                body : JSON.stringify({
+                    name : name.value,
+                
+                    shortDescription : shortDescription.value,
+                
+                    description : description.value,
+
+                    image : base64String
+                })
+            });
+        } catch(err) {
+            console.error(err);
+        }
     })
 })

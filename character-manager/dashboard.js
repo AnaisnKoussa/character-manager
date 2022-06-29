@@ -32,9 +32,10 @@ let showDetailsCard = (character) => {
     deleteButton.addEventListener('click', () => {
         let text = "Are you sure ?";
         if (confirm(text) == true) {
-            fetch(url,{method:'DELETE'})
-                .then(response => response.json())
-                .then(data=> console.log(data))
+            fetch(`https://character-database.becode.xyz/characters/${character.id}`,{method:'DELETE'});
+            section.innerHTML = `
+            <p>The character is deleted !</p>
+            `
         } 
     })
 }

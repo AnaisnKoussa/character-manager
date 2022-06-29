@@ -24,7 +24,7 @@ aCreation.addEventListener("click", () => {
     `   
     let button = document.querySelector("#submit");
     let name = document.querySelector("#name");
-    let shortDescription = document.querySelector("#sdescription");
+    let shortDescription = document.querySelector("#sDescription");
     let description = document.querySelector("#description");
     const file = document.querySelector("input[type=file]");
     var base64String = "";
@@ -33,7 +33,6 @@ aCreation.addEventListener("click", () => {
         var reader = new FileReader();
         reader.onload = function () {
             base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
-            imageBase64Stringsep = base64String;
         };
         reader.readAsDataURL(file);
     }
@@ -42,21 +41,24 @@ aCreation.addEventListener("click", () => {
         Uploaded();
     });
     button.addEventListener("click", () => {
-        try {
-            fetch("https://character-database.becode.xyz/characters", {
-                method: 'POST',
-                body : JSON.stringify({
-                    name : name.value,
+        console.log("yes")
+        fetch("https://character-database.becode.xyz/characters", {
+            method: 'POST',
+            body: JSON.stringify({
+                name : name.value,
                 
-                    shortDescription : shortDescription.value,
+                shortDescription : shortDescription.value,
                 
-                    description : description.value,
+                description : description.value,
 
-                    image : base64String
-                })
-            });
-        } catch(err) {
-            console.error(err);
-        }
+                image : base64String
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+        name.value = "";
+        shortDescription.value = "";
+        description.value = "";
     })
 })

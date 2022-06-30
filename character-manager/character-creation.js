@@ -1,4 +1,4 @@
-const aCreation = document.querySelector("#a-character-creation");
+const aCreation = document.querySelector(".ajouter");
 const dashboard = document.querySelector("#dashboard")
 const main = document.querySelector("main")
 const url = "https://character-database.becode.xyz/characters";
@@ -10,15 +10,13 @@ aCreation.addEventListener("click", () => {
     main.appendChild(section);
     section.classList.add("character-creaction");
     section.innerHTML = `
-    <form>
-        <label for="name"></label>Name :<br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="sdescription">Short Description :</label><br>
-        <textarea id="sDescription" type="text"></textarea><br><br>
-        <label for="description">Description :</label><br>
-        <textarea id="description"></textarea><br><br>
-        <label for="image"></label>Image :<br>
-        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"><br><br>
+    <form id="formCreation">
+        <h1>Create the character !</h1></br>
+        <input type="text" id="name" class= "textField" name="name" placeholder = "Name"></br>
+        <textarea id="sDescription" class= "textField" placeholder="Short Description"></textarea></br>
+        <textarea id="description" class= "textField" placeholder="Description"></textarea></br>
+        <label for= "image">Image :</label></br>
+        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br>
         <button id="submit">Submit</button>
     </form>
     `   

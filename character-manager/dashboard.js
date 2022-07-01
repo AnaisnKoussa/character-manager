@@ -11,7 +11,7 @@ let getCharacterCard = (character) => {
             <h2>${character.name}</h2>
             <img src = "data:image/png;base64,${character.image}">
             <h3>${character.shortDescription}</h3>
-            <a id="a-${character.id}" class="a-dashboard" href="#">More...  </a>
+            <a id="a-${character.id}" class="a-dashboard" href="#">Learn More</a>
         `;
 };
 

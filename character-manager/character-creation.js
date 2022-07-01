@@ -14,19 +14,21 @@ aCreation.addEventListener("click", () => {
     formCreation.remove();
     sec.remove();
     dashboard.remove();
-    
     main.appendChild(section);
     section.classList.add("character-creaction");
     section.innerHTML = 
     `
     <div id="formCreation">
         <h1>Create the character !</h1></br>
-        <input type="text" id="name" class= "textField" name="name" placeholder = "Name"></br>
-        <textarea id="sDescription" class= "textField" placeholder="Short Description"></textarea></br>
-        <textarea id="description" class= "textField" placeholder="Description"></textarea></br>
-        <label class="add_image" for= "image">Ajouter image</label></br>
+        <label for="name">Name :</label>
+        <input type="text" id="name" class= "textField" name="name"></br>
+        <label for="sDescription">Short Description :</label>
+        <textarea id="sDescription" class= "textField"></textarea></br>
+        <label for="description">Description :</label>
+        <textarea id="description" class= "textField"></textarea></br>
+        <label for= "image">Image :</label>
         <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br>
-        <button id="submit">Create</button>
+        <button id="submit">Submit</button></br>
     </div>
     `   
     var button = document.querySelector("#submit");

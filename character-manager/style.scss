@@ -6,20 +6,6 @@ body{
   margin: 0;
   background:  linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(87,145,184,1) 0%, rgba(187,234,244,1) 100%);;
   font-family: 'Oswald', sans-serif;
-  
-
-
- /*    
- 
- 
- 
- HEADER  
- 
- 
- 
- */
- 
-;
   header{
     background-color: #17A2B8;
     height: auto;
@@ -36,7 +22,6 @@ body{
             height: 32px;
           }
       }
-
       .on{
         display: block; 
       }
@@ -70,22 +55,11 @@ body{
             height:50px;
             width:50px;
             transform: rotate(45deg);
-            
             :hover{
             transform: rotate(0deg);
             }
           }
         }
-
-
-/*
-
-
-LOGO-CREATION-PERSONNAGE
-
-
-*/
-
         #a-character-creation{
           text-decoration: none;
           color:rgb(31, 48, 146);
@@ -118,29 +92,8 @@ LOGO-CREATION-PERSONNAGE
       }
     }
   }
-
-
-/*
-
-
-
-MAIN
-
-
-
-*/
-
-
   main {
     margin: 30px;
-
-        /*
-
-        LISTE DES TOUT LES CHARACTER
-
-        */
-
-
       .container {
         display: flex;
         flex-wrap: wrap;
@@ -195,7 +148,7 @@ MAIN
         }
         }
         .a-dashboard{
-          font-size: 25px;
+          font-size: 20px;
           text-decoration: none;
           background-color: #ffffff;
           color: #17A2B8;
@@ -203,23 +156,10 @@ MAIN
           border: 1px solid rgb(148, 213, 243);
           border-radius: 50px;
           box-shadow:  0 0 10px #ffffff, 0 0px rgb(255, 255, 255);
+          width: 140px;
           padding: 12px;
-          
-
         }
       }
-
-
-      /*
-      
-      
-      CREATION DU PERSONNAGE
-      
-      
-      */
-
-
-
       .character-creaction{
         margin-bottom: 70px;
         #formCreation{
@@ -227,32 +167,18 @@ MAIN
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          
-          h1{
-            text-align: left;
-            color:#ffffff;
-            text-shadow: 0 1px 10px #5f8a80, 0 1px 10px #5f8a80;
-            font-size: 26px;
-            margin:12px 150px 0 0;
-            border-bottom:2px solid  #a6dae4;
-          }
-          width: 250px;
           background-color: #cbf3ff;
           margin: auto;
           border: solid 3px #abd9e7;
           box-shadow:0 0 10px #abd9e7, 0 0 10px #abd9e7, 0 0 10px #abd9e7 ;
           border-radius: 10px;
           width: 500px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .textField{
-            width: max;
-            height: 45px;
-            background-color:#cbf3ff ;
-            border:none;
-            border-bottom: solid 1px #a6dae4;
-            border-top:  solid 1px #a6dae4;
+          h1{
+            text-align: left;
+            color:#ffffff;
+            text-shadow: 0 1px 10px #5f8a80, 0 1px 10px #5f8a80;
+            font-size: 26px;
+            margin:12px 150px 0 0;
           }
           #name {
             height: 30px;
@@ -261,14 +187,10 @@ MAIN
             font-family: 'Oswald', sans-serif;
             border: none;
             box-shadow: 2px 2px 3px white;
-            border-radius: 45px;
+            border-radius: 20px;
             background-color: white;
             text-align: center;
             padding: 1px 2px;
-              ::marker{
-                background-color: yellow;
-              }
-
           }
           textarea {
             vertical-align: middle;
@@ -285,7 +207,11 @@ MAIN
           #image{
             font-size: 15px;
             font-family: 'Oswald', sans-serif;
-          }
+            border: none;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+          } 
           #submit {
             height: 45px;
             width: 190px;
@@ -301,50 +227,7 @@ MAIN
               opacity: 70%;
               cursor: pointer;
               color: black;
-
             }
-          }
-  
-          
-          .imageForm{
-            color:red;
-            background-color: #17A2B8;
-          }
-          input[type="file"] {
-            display: none;
-          } 
-           .hd{
-            border: 1px solid #ccc;
-            display: inline-block;
-            padding: 6px 12px;
-            cursor: pointer;
-             }
-          .add_image{
-            width: 135x;
-            height: auto;
-            margin: 15px 0 ;
-            padding: 6px 12px;
-            font-size: 15px;
-            color: #ffffff;
-            text-shadow:0 0 10px #abd9e7, 0 0 10px #abd9e7, 0 0 10px #abd9e7  ;
-            background-color: #8FE0F7;
-            border : 1px solid #8FE0F7;
-            border-radius: 7px;
-            cursor: pointer;
-
-          }
-          #submit{
-            width: 135x;
-            height: 55px;
-            margin: 25px 0 ;
-            font-size: 35px;
-            color: #ffffff;
-            text-shadow:0 0 10px #abd9e7, 0 0 10px #abd9e7, 0 0 10px #abd9e7  ;
-            background-color: #8FE0F7;
-            border : 1px solid #8FE0F7;
-            border-radius: 15px;
-            cursor: pointer;
-
           }
         }
       }

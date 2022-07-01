@@ -11,7 +11,7 @@ let getCharacterCard = (character) => {
             <h2>${character.name}</h2>
             <img src = "data:image/png;base64,${character.image}">
             <h3>${character.shortDescription}</h3>
-            <a id="a-${character.id}" class="a-dashboard" href="#">More...  </a>
+            <a id="a-${character.id}" class="a-dashboard" href="#">Learn More</a>
         `;
 };
 
@@ -45,7 +45,7 @@ let showDetailsCard = (character) => {
         main.appendChild(section);
         section.classList.add("character-creaction");
         section.innerHTML = `
-        <form id="formCreation">
+        <div id="formCreation">
             <h1>Create the character !</h1></br>
             <label for="name">Name :</label>
             <input type="text" id="name" class= "textField" name="name"></br>
@@ -56,7 +56,7 @@ let showDetailsCard = (character) => {
             <label for= "image">Image :</label>
             <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br>
             <button id="submit">Submit</button></br>
-        </form>
+        </div>
         ` 
     let button = document.querySelector("#submit");
     let name = document.querySelector("#name");

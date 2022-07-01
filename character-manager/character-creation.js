@@ -17,10 +17,10 @@ aCreation.addEventListener("click", () => {
         <label for="sDescription">Short Description :</label>
         <textarea id="sDescription" class= "textField"></textarea></br>
         <label for="description">Description :</label>
-        <textarea id="description" class= "textField" placeholder="Description"></textarea></br>
+        <textarea id="description" class= "textField"></textarea></br>
         <label for= "image">Image :</label>
-        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br></br>
-        <button id="submit">Submit</button></br></br>
+        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br>
+        <button id="submit">Submit</button></br>
     </form>
     `   
     let button = document.querySelector("#submit");

@@ -178,23 +178,56 @@ body{
           display: flex;
           flex-direction: column;
           align-items: center;
-          .txtField{
-            width: max;
-            height: 45px;
-            background-color:#cbf3ff ;
-            border:none;
-            border-bottom: solid 1px #5f8a80;
-            border-top:  solid 1px #5f8a80;
+          #name {
+            height: 30px;
+            width: 190px;
+            font-size: 15px;
+            font-family: 'Oswald', sans-serif;
+            border: none;
+            box-shadow: 2px 2px 3px white;
+            border-radius: 45px;
+            background-color: white;
             text-align: center;
-            margin: 20px 0 15px 0;
+            padding: 1px 2px;
               ::marker{
                 background-color: yellow;
               }
 
           }
           textarea {
-            vertical-align: top;
+            height: 45px;
+            width: 190px;
+            font-size: 15px;
+            font-family: 'Oswald', sans-serif;
+            border: none;
+            box-shadow: 2px 2px 3px white;
+            border-radius: 20px;
+            background-color: white;
+            text-align: center;
           }
+          #image{
+            font-size: 15px;
+            font-family: 'Oswald', sans-serif;
+          }
+          #submit {
+            height: 45px;
+            width: 190px;
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+            border: none;
+            box-shadow: 3px 3px 5px #17A2B8;
+            border-radius: 30px;
+            background-color: #17A2B8;
+            color: white;
+            text-align: center;
+            &:hover{
+              opacity: 70%;
+              cursor: pointer;
+              color: black;
+
+            }
+          }
+  
           
           .imageForm{
             color:red;

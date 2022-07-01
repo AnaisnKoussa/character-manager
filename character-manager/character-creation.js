@@ -1,3 +1,4 @@
+
 const aCreation = document.querySelector(".ajouter");
 const dashboard = document.querySelector("#dashboard")
 const main = document.querySelector("main")
@@ -5,25 +6,33 @@ const url = "https://character-database.becode.xyz/characters";
 
 
 aCreation.addEventListener("click", () => {
-    dashboard.remove();
+    const sec = document.querySelector("section");
     const section = document.createElement("section");
     main.appendChild(section);
     section.classList.add("character-creaction");
-    section.innerHTML = `
-    <form id="formCreation">
+    const formCreation = document.querySelector(".character-creaction")
+    formCreation.remove();
+    sec.remove();
+    dashboard.remove();
+    
+    main.appendChild(section);
+    section.classList.add("character-creaction");
+    section.innerHTML = 
+    `
+    <div id="formCreation">
         <h1>Create the character !</h1></br>
         <input type="text" id="name" class= "textField" name="name" placeholder = "Name"></br>
         <textarea id="sDescription" class= "textField" placeholder="Short Description"></textarea></br>
         <textarea id="description" class= "textField" placeholder="Description"></textarea></br>
-        <label for= "image">Image :</label></br>
+        <label class="add_image" for= "image">Ajouter image</label></br>
         <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br>
-        <button id="submit">Submit</button>
-    </form>
+        <button id="submit">Create</button>
+    </div>
     `   
-    let button = document.querySelector("#submit");
-    let name = document.querySelector("#name");
-    let shortDescription = document.querySelector("#sDescription");
-    let description = document.querySelector("#description");
+    var button = document.querySelector("#submit");
+    var name = document.querySelector("#name");
+    var shortDescription = document.querySelector("#sDescription");
+    var description = document.querySelector("#description");
     const file = document.querySelector("input[type=file]");
     var base64String = "";
     function Uploaded() {
@@ -41,7 +50,10 @@ aCreation.addEventListener("click", () => {
     button.addEventListener("click", () => {
         console.log("yes")
         fetch("https://character-database.becode.xyz/characters", {
-            method: 'POST',
+            method: 'POST',           
+             headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
             body: JSON.stringify({
                 name : name.value,
                 
@@ -50,10 +62,8 @@ aCreation.addEventListener("click", () => {
                 description : description.value,
 
                 image : base64String
-            }),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
+            })
+
         })
         name.value = "";
         shortDescription.value = "";

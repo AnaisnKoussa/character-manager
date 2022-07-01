@@ -6,13 +6,9 @@ const url = "https://character-database.becode.xyz/characters";
 
 
 aCreation.addEventListener("click", () => {
-    const sec = document.querySelector("section");
     const section = document.createElement("section");
     main.appendChild(section);
     section.classList.add("character-creation");
-    const formCreation = document.querySelector(".character-creation")
-    formCreation.remove();
-    sec.remove();
     dashboard.remove();
     main.appendChild(section);
     section.classList.add("character-creation");
@@ -70,5 +66,10 @@ aCreation.addEventListener("click", () => {
         name.value = "";
         shortDescription.value = "";
         description.value = "";
+        const characterCreation = document.querySelector(".character-creation");
+        const p = document.createElement("p");
+        p.classList.add("modify_c");
+        p.textContent = "The character has been created !";
+        characterCreation.appendChild(p);
     })
 })

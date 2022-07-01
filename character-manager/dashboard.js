@@ -20,7 +20,6 @@ let showDetailsCard = (character) => {
     let section = document.createElement("section");
     section.classList.add("character-editor");
     section.innerHTML = `
-    
         <div class="description_fiche">
             <h2>${character.name}</h2>
             <img src = "data:image/png;base64,${character.image}">
@@ -28,10 +27,9 @@ let showDetailsCard = (character) => {
             <p>${character.description}</p>
         </div>   
         <div id="button-MD">
-            <button id="button-modify" type="button">Modify</button>
-            <button id="button-delete" type="button">Delete</button>   
-        </div>
-       
+            <button id="button-modify" type="button"></button>
+            <button id="button-delete" type="button"></button>   
+        </div> 
     `;
     main.appendChild(section);
     const deleteButton = document.querySelector("#button-delete");
@@ -47,12 +45,10 @@ let showDetailsCard = (character) => {
 
     const modifyButton = document.querySelector("#button-modify");
     modifyButton.addEventListener('click', () => {
-
-        const sec = document.querySelector("section");
+        const characterEditor = document.querySelector(".character-editor");
+        characterEditor.remove();
         const section = document.createElement("section");
         main.appendChild(section);
-        sec.remove();
-
         section.classList.add("character-creaction");
         section.innerHTML = `
         <div id="formCreation">

@@ -45,14 +45,15 @@ let showDetailsCard = (character) => {
         main.appendChild(section);
         section.classList.add("character-creaction");
         section.innerHTML = `
-        <form>
-            <label for="name"></label>Name :</br></br>
-            <input type="text" id="name" name="name"></br></br>
-            <label for="sdescription">Short Description :</label></br></br>
-            <textarea id="sDescription" type="text"></textarea></br></br>
-            <label for="description">Description :</label></br></br>
-            <textarea id="description"></textarea></br></br>
-            <label for="image"></label>Image :</br></br>
+        <form id="formCreation">
+            <h1>Create the character !</h1></br></br>
+            <label for="name">Name :</label>
+            <input type="text" id="name" class= "textField" name="name"></br>
+            <label for="sDescription">Short Description :</label>
+            <textarea id="sDescription" class= "textField"></textarea></br>
+            <label for="description">Description :</label>
+            <textarea id="description" class= "textField" placeholder="Description"></textarea></br>
+            <label for= "image">Image :</label>
             <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br></br>
             <button id="submit">Submit</button></br></br>
         </form>

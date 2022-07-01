@@ -12,10 +12,13 @@ aCreation.addEventListener("click", () => {
     section.innerHTML = `
     <form id="formCreation">
         <h1>Create the character !</h1></br></br>
-        <input type="text" id="name" class= "textField" name="name" placeholder = "Name"></br>
-        <textarea id="sDescription" class= "textField" placeholder="Short Description"></textarea></br>
+        <label for="name">Name :</label>
+        <input type="text" id="name" class= "textField" name="name"></br>
+        <label for="sDescription">Short Description :</label>
+        <textarea id="sDescription" class= "textField"></textarea></br>
+        <label for="description">Description :</label>
         <textarea id="description" class= "textField" placeholder="Description"></textarea></br>
-        <label for= "image">Image :</label></br>
+        <label for= "image">Image :</label>
         <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br></br>
         <button id="submit">Submit</button></br></br>
     </form>

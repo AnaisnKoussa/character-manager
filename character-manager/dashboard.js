@@ -46,7 +46,7 @@ let showDetailsCard = (character) => {
         section.classList.add("character-creaction");
         section.innerHTML = `
         <form id="formCreation">
-            <h1>Create the character !</h1></br></br>
+            <h1>Create the character !</h1></br>
             <label for="name">Name :</label>
             <input type="text" id="name" class= "textField" name="name"></br>
             <label for="sDescription">Short Description :</label>

@@ -5,7 +5,7 @@
 body{
   margin: 0;
   background:  linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(87,145,184,1) 0%, rgba(187,234,244,1) 100%);;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;;
   
 
 
@@ -19,7 +19,8 @@ body{
  
  */
  
-;
+ 
+ 
   header{
     background-color: #17A2B8;
     height: auto;
@@ -132,7 +133,7 @@ MAIN
 
 
   main {
-    margin: 30px;
+      margin: 30px;
 
         /*
 
@@ -271,7 +272,6 @@ MAIN
 
           }
           textarea {
-            vertical-align: middle;
             height: 45px;
             width: 190px;
             font-size: 15px;
@@ -312,7 +312,7 @@ MAIN
           }
           input[type="file"] {
             display: none;
-          } 
+           } 
            .hd{
             border: 1px solid #ccc;
             display: inline-block;
@@ -348,6 +348,94 @@ MAIN
           }
         }
       }
+
+
+      /*
+
+
+      Modifer character
+
+
+      */
+
+
+      .character-editor{
+        border-radius: 25px;
+        box-shadow: 3px 3px 3px rgb(23, 141, 161);
+        padding: 20px;
+        margin: auto;
+        width: 900px;
+        height: auto;
+        text-align: center;
+        background-color: #bed6f5;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        .description_fiche{
+          h2{
+            font-size: 25px;
+            color:#17A2B8;
+            text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255) ;
+            }
+          img{
+            border-radius: 50%;
+            height: 200px;
+            width:200px;
+
+          }
+
+          h3{
+            color:rgb(96, 125, 255);
+            text-shadow: 0 1px 10px beige, 0 1px 10px beige ;
+            font-size: 17px;
+          }
+        }
+
+        button{
+          padding: 0;
+          margin: 0;
+          top: 300px;
+          left: 400px;
+          width:50px;
+          height:50px;
+          border-radius: 12px;
+          border: 3px solid rgb(236, 236, 236);
+          font-size: 0;
+          background-color: #17A2B8;
+          cursor: pointer;
+        }
+        #button-MD{
+          justify-self: right;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap:12px;
+
+            #button-modify{
+              background-image: url("/img/modify.png"); 
+      
+        
+            }
+            #button-delete{
+              background-image: url("/img/delete.png") ;
+            
+
+            }
+        }
+        :hover{
+          img{
+          box-shadow:  0 0 10px #ffffff, 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255) ;
+          cursor: pointer;
+         }
+        }
+        .deleted_c {
+          font-size: 35px;
+          color:rgb(18, 115, 145)
+        }
+      }
+
+
   }
 }
 

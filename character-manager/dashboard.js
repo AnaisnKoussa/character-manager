@@ -20,12 +20,18 @@ let showDetailsCard = (character) => {
     let section = document.createElement("section");
     section.classList.add("character-editor");
     section.innerHTML = `
-        <h2>${character.name}</h2>
-        <img src = "data:image/png;base64,${character.image}">
-        <h3>${character.shortDescription}</h3>
-        <p>${character.description}</p>
-        <button id="button-modify" type="button">Modify</button>
-        <button id="button-delete" type="button">Delete</button>   
+    
+        <div class="description_fiche">
+            <h2>${character.name}</h2>
+            <img src = "data:image/png;base64,${character.image}">
+            <h3>${character.shortDescription}</h3>
+            <p>${character.description}</p>
+        </div>   
+        <div id="button-MD">
+            <button id="button-modify" type="button">Modify</button>
+            <button id="button-delete" type="button">Delete</button>   
+        </div>
+       
     `;
     main.appendChild(section);
     const deleteButton = document.querySelector("#button-delete");
@@ -34,19 +40,23 @@ let showDetailsCard = (character) => {
         if (confirm(text) == true) {
             fetch(`https://character-database.becode.xyz/characters/${character.id}`,{method:'DELETE'});
             section.innerHTML = `
-            <p>The character is deleted !</p>
+            <p class="deleted_c">The character has been deleted !</p>
             `
         } 
     })
 
     const modifyButton = document.querySelector("#button-modify");
     modifyButton.addEventListener('click', () => {
+
+        const sec = document.querySelector("section");
         const section = document.createElement("section");
         main.appendChild(section);
+        sec.remove();
+
         section.classList.add("character-creaction");
         section.innerHTML = `
-        <form id="formCreation">
-            <h1>Create the character !</h1></br>
+        <div id="formCreation">
+            <h1>Modify the character !</h1></br>
             <label for="name">Name :</label>
             <input type="text" id="name" class= "textField" name="name"></br>
             <label for="sDescription">Short Description :</label>
@@ -56,7 +66,7 @@ let showDetailsCard = (character) => {
             <label for= "image">Image :</label>
             <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br>
             <button id="submit">Submit</button></br>
-        </form>
+        </div>
         ` 
     let button = document.querySelector("#submit");
     let name = document.querySelector("#name");

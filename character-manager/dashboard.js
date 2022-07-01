@@ -46,15 +46,15 @@ let showDetailsCard = (character) => {
         section.classList.add("character-creaction");
         section.innerHTML = `
         <form>
-            <label for="name"></label>Name :<br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="sdescription">Short Description :</label><br>
-            <textarea id="sDescription" type="text"></textarea><br><br>
-            <label for="description">Description :</label><br>
-            <textarea id="description"></textarea><br><br>
-            <label for="image"></label>Image :<br>
-            <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"><br><br>
-            <button id="submit">Submit</button>
+            <label for="name"></label>Name :</br></br>
+            <input type="text" id="name" name="name"></br></br>
+            <label for="sdescription">Short Description :</label></br></br>
+            <textarea id="sDescription" type="text"></textarea></br></br>
+            <label for="description">Description :</label></br></br>
+            <textarea id="description"></textarea></br></br>
+            <label for="image"></label>Image :</br></br>
+            <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br></br>
+            <button id="submit">Submit</button></br></br>
         </form>
         ` 
     let button = document.querySelector("#submit");

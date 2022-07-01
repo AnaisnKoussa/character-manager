@@ -11,13 +11,13 @@ aCreation.addEventListener("click", () => {
     section.classList.add("character-creaction");
     section.innerHTML = `
     <form id="formCreation">
-        <h1>Create the character !</h1></br>
+        <h1>Create the character !</h1></br></br>
         <input type="text" id="name" class= "textField" name="name" placeholder = "Name"></br>
         <textarea id="sDescription" class= "textField" placeholder="Short Description"></textarea></br>
         <textarea id="description" class= "textField" placeholder="Description"></textarea></br>
         <label for= "image">Image :</label></br>
-        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br>
-        <button id="submit">Submit</button>
+        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"></br></br>
+        <button id="submit">Submit</button></br></br>
     </form>
     `   
     let button = document.querySelector("#submit");

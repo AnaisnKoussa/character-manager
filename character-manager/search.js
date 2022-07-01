@@ -15,7 +15,7 @@ let getCharacterCard = (character) => {
         `;
 };
 
-input.addEventListener("focusout", (e) => {
+input.addEventListener("input", (e) => {
     let name = (e.target.value);
     console.log(name);
     fetch(url, methodGet)

@@ -159,7 +159,7 @@ body{
           padding: 12px;
         }
       }
-      .character-creaction{
+      .character-creation{
         margin-bottom: 70px;
         #formCreation{
           display: flex;
@@ -226,6 +226,11 @@ body{
               color: black;
             }
           }
+        }
+        .modify_c {
+          font-size: 25px;
+          color:rgb(18, 115, 145); 
+          text-align: center;
         }
       }
       .character-editor{

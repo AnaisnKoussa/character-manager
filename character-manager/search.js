@@ -49,7 +49,7 @@ let showDetailsCard = (character) => {
         characterEditor.remove();
         const section = document.createElement("section");
         main.appendChild(section);
-        section.classList.add("character-creaction");
+        section.classList.add("character-creation");
         section.innerHTML = `
         <div id="formCreation">
             <h1>Modify the character !</h1></br>
@@ -101,9 +101,14 @@ let showDetailsCard = (character) => {
             name.value = "";
             shortDescription.value = "";
             description.value = "";
-        })
+            const characterCreation = document.querySelector(".character-creation");
+            const p = document.createElement("p");
+            p.classList.add("modify_c");
+            p.textContent = "The character has been changed !";
+            characterCreation.appendChild(p);
+        });
     });
-}
+};
 
 input.addEventListener("input", (e) => {
     let name = (e.target.value);

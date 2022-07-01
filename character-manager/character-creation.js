@@ -9,13 +9,13 @@ aCreation.addEventListener("click", () => {
     const sec = document.querySelector("section");
     const section = document.createElement("section");
     main.appendChild(section);
-    section.classList.add("character-creaction");
-    const formCreation = document.querySelector(".character-creaction")
+    section.classList.add("character-creation");
+    const formCreation = document.querySelector(".character-creation")
     formCreation.remove();
     sec.remove();
     dashboard.remove();
     main.appendChild(section);
-    section.classList.add("character-creaction");
+    section.classList.add("character-creation");
     section.innerHTML = 
     `
     <div id="formCreation">

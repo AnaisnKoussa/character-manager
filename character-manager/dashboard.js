@@ -2,9 +2,10 @@ const url = "https://character-database.becode.xyz/characters";
 const methodGet = {
     method: 'GET'
 };
-const dashboard = document.querySelector("#dashboard");
+const dashboard = document.querySelector(".dashboard");
 const main = document.querySelector("main");
 const characterContainer = document.querySelector(".container");
+
 
 let getCharacterCard = (character) => {
     return `
@@ -122,9 +123,13 @@ fetch(url, methodGet)
             characterContainer.appendChild(section);
             let a = document.querySelector(`#a-${character.id}`);
             a.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            showDetailsCard(character);
+                e.preventDefault(); 
+                showDetailsCard(character);
             });
         }    
     });
+
+
+
+    
 

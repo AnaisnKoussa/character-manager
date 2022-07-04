@@ -3,7 +3,6 @@ let url = `https://character-database.becode.xyz/characters`;
 const methodGet = {
     method: 'GET'
 };
-const dashboard = document.querySelector("#dashboard");
 const main = document.querySelector("main");
 
 let getCharacterCard = (character) => {
@@ -119,6 +118,7 @@ input.addEventListener("input", (e) => {
         for(let i = 0; i < data.length; i ++) {
             if(data[i].name === name) {
                 let character = data[i];
+                const dashboard = document.querySelector(".dashboard");
                 dashboard.remove();
                 let div = document.createElement("div");
                 div.classList.add("container");
@@ -129,13 +129,14 @@ input.addEventListener("input", (e) => {
                 div.appendChild(section);
                 let a = document.querySelector(`#a-${character.id}`);
                 a.addEventListener('click', (e) => {
-                e.preventDefault(); 
-                showDetailsCard(character);
+                    e.preventDefault(); 
+                    showDetailsCard(character);
                 });
             }
         };
     });
 });
+
 
 
 

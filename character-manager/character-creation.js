@@ -1,14 +1,17 @@
 
 const aCreation = document.querySelector(".ajouter");
-const dashboard = document.querySelector("#dashboard")
 const main = document.querySelector("main")
 const url = "https://character-database.becode.xyz/characters";
+const methodGet = {
+    method: 'GET'
+};
 
 
 aCreation.addEventListener("click", () => {
     const section = document.createElement("section");
     main.appendChild(section);
     section.classList.add("character-creation");
+    const dashboard = document.querySelector(".dashboard");
     dashboard.remove();
     main.appendChild(section);
     section.classList.add("character-creation");
@@ -73,3 +76,8 @@ aCreation.addEventListener("click", () => {
         characterCreation.appendChild(p);
     })
 })
+
+
+
+
+

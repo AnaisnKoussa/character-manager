@@ -295,6 +295,11 @@ body{
         }
       }
   }
+
+  @media (max-width: 700px){
+    nav {
+      flex-direction: column;
+      padding: 15px;
+    }
+  }
 }
-
-
